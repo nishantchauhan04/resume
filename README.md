@@ -7,6 +7,7 @@ Single-page, animated resume for Nishant Chauhan (AI/Cloud architect, 16+ years 
 - `styles/main.css` — theme, layout, animations, glassmorphism, marquee, responsive tweaks.
 - `scripts/app.js` — scroll reveals, parallax orbs, magnetic buttons, marquee duplication.
 - `assets/profile.jpg` — place your portrait here (used in the hero).
+ - `assets/favicon.svg` — tab icon.
 
 ## Run locally
 Open `index.html` directly in a browser, or serve statically (recommended for correct font caching):
@@ -20,6 +21,7 @@ python3 -m http.server 8000
 - Visual language: charcoal base with electric cyan and coral highlights; glass cards with soft noise.
 - Typography: Sora for body, DM Serif Display for headlines.
 - Motion: scroll reveal, floating hero cards, parallax light orbs, magnetic CTAs, shimmering chips, continuous marquee.
+- Themes: toggle between Aurora (default) and Sunrise using the “Theme” button in the header; preference is saved locally.
 
 ## Customization
 - Update contact links in the `#contact` section.

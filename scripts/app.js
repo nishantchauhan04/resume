@@ -13,6 +13,25 @@ const observer = new IntersectionObserver(
 
 document.querySelectorAll(".reveal").forEach(el => observer.observe(el));
 
+const themeToggle = document.querySelector(".theme-toggle");
+const applyTheme = theme => {
+  document.documentElement.dataset.theme = theme;
+  if (themeToggle) {
+    themeToggle.textContent = theme === "sunrise" ? "Theme: Sunrise" : "Theme: Aurora";
+  }
+};
+
+const savedTheme = localStorage.getItem("theme");
+applyTheme(savedTheme === "sunrise" ? "sunrise" : "aurora");
+
+if (themeToggle) {
+  themeToggle.addEventListener("click", () => {
+    const next = document.documentElement.dataset.theme === "sunrise" ? "aurora" : "sunrise";
+    applyTheme(next);
+    localStorage.setItem("theme", next);
+  });
+}
+
 const orbs = document.querySelectorAll(".orb");
 document.addEventListener("pointermove", e => {
   const { clientX, clientY } = e;

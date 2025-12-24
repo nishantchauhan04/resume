@@ -15,6 +15,19 @@
   --font-display: "DM Serif Display", "Times New Roman", serif;
 }
 
+:root[data-theme="sunrise"] {
+  --bg: #0f0a0c;
+  --panel: rgba(255, 255, 255, 0.05);
+  --glass: rgba(255, 255, 255, 0.1);
+  --stroke: rgba(255, 255, 255, 0.14);
+  --text: #fff7ec;
+  --muted: #d8c8bd;
+  --accent: #ffb347;
+  --accent-2: #ff6f61;
+  --accent-3: #ffd166;
+  --shadow: 0 18px 60px rgba(0, 0, 0, 0.38);
+}
+
 * {
   box-sizing: border-box;
   margin: 0;
@@ -55,6 +68,13 @@ a {
     radial-gradient(circle at 50% 80%, rgba(255, 200, 87, 0.1), transparent 36%),
     linear-gradient(135deg, #060b15 0%, #0a1324 45%, #060b15 100%);
   filter: saturate(1.05);
+}
+
+:root[data-theme="sunrise"] .bg-gradient {
+  background: radial-gradient(circle at 18% 24%, rgba(255, 179, 71, 0.22), transparent 34%),
+    radial-gradient(circle at 78% 6%, rgba(255, 111, 97, 0.2), transparent 34%),
+    radial-gradient(circle at 46% 82%, rgba(255, 209, 102, 0.16), transparent 38%),
+    linear-gradient(140deg, #160c0f 0%, #1e0f13 50%, #160c0f 100%);
 }
 
 .bg-noise {
@@ -120,6 +140,8 @@ a {
   transition: all 0.25s ease;
 }
 .ghost-btn:hover { border-color: var(--accent); color: var(--accent); }
+
+.theme-toggle { margin-right: 12px; white-space: nowrap; }
 
 main { padding: 48px 32px 120px; max-width: 1200px; margin: 0 auto; }
 
