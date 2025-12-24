@@ -22,7 +22,8 @@ const applyTheme = theme => {
 };
 
 const savedTheme = localStorage.getItem("theme");
-applyTheme(savedTheme === "sunrise" ? "sunrise" : "aurora");
+const initialTheme = savedTheme === "aurora" || savedTheme === "sunrise" ? savedTheme : "sunrise";
+applyTheme(initialTheme);
 
 if (themeToggle) {
   themeToggle.addEventListener("click", () => {
